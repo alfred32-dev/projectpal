@@ -33,7 +33,7 @@ export class Home implements OnInit {
   }
 
   openWhatsApp() {
-    const message = "Hi! I'm interested in your tech tutoring services. Can you help me with my project?";
+    const message = "Hello there! I'm interested in your tech tutoring services. Here are the details...";
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/16143306944?text=${encodedMessage}`, '_blank');
   }
@@ -63,8 +63,7 @@ export class Home implements OnInit {
     if (this.contactData.name && this.contactData.email && this.contactData.message) {
       const subject = `New message from ${this.contactData.name}`;
       const body = `
-Name: ${this.contactData.name}
-Email: ${this.contactData.email}
+
 Message: ${this.contactData.message}
       `.trim();
       
