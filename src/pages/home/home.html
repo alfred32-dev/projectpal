@@ -1,0 +1,467 @@
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <span class="logo-icon">&gt;</span>
+      <span class="logo-text">ProjectPal</span>
+    </div>
+    
+    <div class="nav-links" [class.active]="isMenuOpen">
+      <a class="nav-link" (click)="scrollToSection('home'); closeMenu()">Home</a>
+      <a class="nav-link" (click)="scrollToSection('services'); closeMenu()">Services</a>
+      <a class="nav-link" (click)="scrollToSection('about'); closeMenu()">About</a>
+      <a class="nav-link" (click)="scrollToSection('reviews'); closeMenu()">Reviews</a>
+      <a class="nav-link" (click)="scrollToSection('contact'); closeMenu()">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+      <button class="btn-primary" (click)="openWhatsApp()">
+        <span class="btn-icon">💬</span>
+        Get Help Now
+      </button>
+    </div>
+
+    <div class="hamburger-menu" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>
+
+<section id="home" class="hero-section">
+  <div class="hero-background">
+    <img src="hero.jpg" alt="Student getting coding help" class="hero-image">
+    <div class="hero-overlay"></div>
+  </div>
+  
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Assignment Help & Tutoring
+      </div>
+      
+      <h1 class="hero-title">
+        Class Emergency? Deadline Closing In?
+        <span class="title-accent">Always Here to Help</span>
+      </h1>
+
+      <p class="hero-description">
+        Feeling overwhelmed with coding assignments? You're not alone! I'm here to be your personal tech mentor - 
+        helping you understand complex concepts, debug tricky code, and submit assignments you're proud of. 
+        No judgment, just friendly expert help.
+      </p>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Students Helped</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">98%</div>
+          <div class="stat-label">Satisfaction Rate</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">Support Available</div>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <button class="btn-primary hero-btn" (click)="openWhatsApp()">
+          <span class="btn-icon">🚀</span>
+          Start Your Project
+        </button>
+        <button class="btn-secondary hero-btn" (click)="scrollToSection('services')">
+          <span class="btn-icon">📚</span>
+          View All Services
+        </button>
+      </div>
+
+      <div class="hero-guarantees">
+        <div class="guarantee">
+          <span class="guarantee-icon">✅</span>
+          <span>100% Human Written</span>
+        </div>
+        <div class="guarantee">
+          <span class="guarantee-icon">✅</span>
+          <span>Zero Plagiarism</span>
+        </div>
+        <div class="guarantee">
+          <span class="guarantee-icon">✅</span>
+          <span>Unlimited Revisions</span>
+        </div>
+        <div class="guarantee">
+          <span class="guarantee-icon">✅</span>
+          <span>Money Back Guarantee</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-choose-section">
+  <div class="container">
+    <h2 class="section-title">Why Students Choose ProjectPal</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">👨‍💻</div>
+        <h3>Expert Guidance</h3>
+        <p>Learn from an experienced developer who breaks down complex topics into easy-to-understand concepts</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Fast Response</h3>
+        <p>Average response time: 15 minutes. We understand your deadlines matter!</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>Concept Focused</h3>
+        <p>We don't just give answers - we ensure you understand the underlying principles</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💝</div>
+        <h3>Student Friendly</h3>
+        <p>Budget-friendly pricing with discounts for long-term projects and referrals</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="services-section">
+  <div class="container">
+    <h2 class="section-title">Comprehensive Tech Support Services</h2>
+    <p class="section-subtitle">From beginner coding exercises to advanced system design - I've got you covered!</p>
+    
+    <div class="services-grid">
+      <div class="service-category">
+        <h3 class="category-title">💻 Programming & Development</h3>
+        <ul class="service-list">
+          <li>Python scripting & automation</li>
+          <li>Java/C++ assignments</li>
+          <li>Web development (HTML/CSS/JavaScript)</li>
+          <li>Mobile app development</li>
+          <li>Game development projects</li>
+        </ul>
+      </div>
+
+      <div class="service-category">
+        <h3 class="category-title">🌐 Fullstack Applications</h3>
+        <ul class="service-list">
+          <li>React/Node.js applications</li>
+          <li>Database design & SQL/NoSQL</li>
+          <li>API development & integration</li>
+          <li>Deployment & hosting help</li>
+          <li>MERN/MEAN stack projects</li>
+        </ul>
+      </div>
+
+      <div class="service-category">
+        <h3 class="category-title">📊 Data Science & Analytics</h3>
+        <ul class="service-list">
+          <li>Data analysis with Python/R</li>
+          <li>Machine learning projects</li>
+          <li>Statistics assignments</li>
+          <li>Data visualization</li>
+          <li>Big data processing</li>
+        </ul>
+      </div>
+
+      <div class="service-category">
+        <h3 class="category-title">🔐 Cybersecurity & Networking</h3>
+        <ul class="service-list">
+          <li>Security labs & exercises</li>
+          <li>Network security projects</li>
+          <li>Cryptography assignments</li>
+          <li>Security auditing</li>
+          <li>Network configuration</li>
+        </ul>
+      </div>
+
+      <div class="service-category">
+        <h3 class="category-title">☁️ Cloud Computing & DevOps</h3>
+        <ul class="service-list">
+          <li>AWS/Azure/Google Cloud projects</li>
+          <li>Docker containerization</li>
+          <li>Kubernetes orchestration</li>
+          <li>CI/CD pipeline setup</li>
+          <li>Cloud architecture design</li>
+        </ul>
+      </div>
+
+      <div class="service-category">
+        <h3 class="category-title">🎨 Design & UI/UX</h3>
+        <ul class="service-list">
+          <li>Website design (Figma, Adobe XD)</li>
+          <li>UI/UX design projects</li>
+          <li>Graphic design assignments</li>
+          <li>Wireframing & prototyping</li>
+          <li>Design system creation</li>
+        </ul>
+      </div>
+
+      <div class="service-category">
+        <h3 class="category-title">📝 Technical Documentation</h3>
+        <ul class="service-list">
+          <li>Project reports & documentation</li>
+          <li>Technical writing</li>
+          <li>Research papers</li>
+          <li>System documentation</li>
+          <li>API documentation</li>
+        </ul>
+      </div>
+
+      <div class="service-category">
+        <h3 class="category-title">🖥️ System Administration</h3>
+        <ul class="service-list">
+          <li>Linux/Unix system administration</li>
+          <li>Server configuration</li>
+          <li>Bash scripting</li>
+          <li>System monitoring</li>
+          <li>Backup & recovery</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="emergency-banner">
+      <div class="banner-content">
+        <div class="banner-icon">🚨</div>
+        <div class="banner-text">
+          <h3>Emergency Deadline?</h3>
+          <p>Working against the clock? I specialize in last-minute rescues with quick, quality solutions.</p>
+        </div>
+        <button class="btn-emergency" (click)="openWhatsApp()">
+          <span class="btn-icon">⚡</span>
+          Get Emergency Help
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about-section">
+  <div class="container">
+    <div class="about-content">
+      <div class="about-text">
+        <h2 class="section-title">Hi, I'm Your Tutor! 👋</h2>
+        <p>
+          I understand the stress of assignments because I've been there too. As a passionate developer 
+          and educator, I've helped hundreds of students transform their confusion into confidence.
+        </p>
+        <p>
+          My approach is simple: I don't just give you answers. I walk you through solutions, explain the 
+          "why" to ensure you actually understand the concepts. Think of me as 
+          your friendly coding buddy who's always available when you need help.
+        </p>
+        <div class="about-highlights">
+          <div class="highlight">
+            <span class="highlight-number">5+</span>
+            <span class="highlight-text">Years Experience</span>
+          </div>
+          <div class="highlight">
+            <span class="highlight-number">150+</span>
+            <span class="highlight-text">Projects Completed</span>
+          </div>
+          <div class="highlight">
+            <span class="highlight-number">10+</span>
+            <span class="highlight-text">Tech Stacks Mastered</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="reviews-section">
+  <div class="container">
+    <h2 class="section-title">What Students Say</h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"Saved my cybersecurity project the night before deadline! Explained everything so clearly and was incredibly patient."</p>
+        <div class="review-author">
+          <strong>Sarah M.</strong>
+          <span>Computer Science Major</span>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"Finally understood React hooks after our session. The way concepts were broken down made everything click instantly."</p>
+        <div class="review-author">
+          <strong>James K.</strong>
+          <span>Web Development Student</span>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"Went from barely passing to A's in my data structures class. The tutoring sessions were game-changing!"</p>
+        <div class="review-author">
+          <strong>Maria L.</strong>
+          <span>Software Engineering</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="container">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3 (click)="toggleFAQ(0)">How quickly can you help with urgent assignments? <span class="faq-toggle">{{faqOpen[0] ? '−' : '+'}}</span></h3>
+        <div class="faq-answer" [class.active]="faqOpen[0]">
+          <p>I understand tech emergencies! For urgent assignments, I typically respond within 15-30 minutes and can start working immediately. Many last-minute projects have been successfully completed with hours to spare.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 (click)="toggleFAQ(1)">Do you write code from scratch or help me understand? <span class="faq-toggle">{{faqOpen[1] ? '−' : '+'}}</span></h3>
+        <div class="faq-answer" [class.active]="faqOpen[1]">
+          <p>Both! I can write complete solutions when you're in a time crunch, but my preferred approach is collaborative - I guide you through the process, explain each step, and ensure you understand the concepts. You choose what works best for your learning style.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 (click)="toggleFAQ(2)">What if I need revisions or don't understand something? <span class="faq-toggle">{{faqOpen[2] ? '−' : '+'}}</span></h3>
+        <div class="faq-answer" [class.active]="faqOpen[2]">
+          <p>Unlimited revisions are included! I'm committed to your understanding and satisfaction. If anything isn't clear, we'll work on it together until it makes perfect sense - no extra charges, no time limits.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 (click)="toggleFAQ(3)">How do you ensure work is plagiarism-free? <span class="faq-toggle">{{faqOpen[3] ? '−' : '+'}}</span></h3>
+        <div class="faq-answer" [class.active]="faqOpen[3]">
+          <p>All code and solutions are written from scratch specifically for your assignment. I use original approaches and provide detailed comments. You also receive a plagiarism-free guarantee with every project.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 (click)="toggleFAQ(4)">What programming languages and technologies do you cover? <span class="faq-toggle">{{faqOpen[4] ? '−' : '+'}}</span></h3>
+        <div class="faq-answer" [class.active]="faqOpen[4]">
+          <p>I cover virtually all major technologies: Python, Java, JavaScript, React, Node.js, SQL, AWS, Docker, Machine Learning, Cybersecurity tools, and much more. If it's tech-related, I can likely help!</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 (click)="toggleFAQ(5)">Do you offer discounts for students? <span class="faq-toggle">{{faqOpen[5] ? '−' : '+'}}</span></h3>
+        <div class="faq-answer" [class.active]="faqOpen[5]">
+          <p>Absolutely! I offer student-friendly pricing, bundle discounts for multiple assignments, referral bonuses, and special rates for long-term tutoring relationships. Just ask about current discounts when you message me.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <div class="container">
+    <h2 class="section-title">Let's Get Started!</h2>
+    <p class="section-subtitle">Reach out anytime - I'm here to help you succeed</p>
+    
+    <div class="contact-grid">
+      <div class="contact-method">
+        <div class="contact-icon">💬</div>
+        <h3>WhatsApp</h3>
+        <p>Fastest way to get help</p>
+        <button class="btn-contact" (click)="openWhatsApp()">
+          Message Now
+        </button>
+      </div>
+      
+      <div class="contact-method">
+        <div class="contact-icon">📧</div>
+        <h3>Email</h3>
+        <p>For detailed project discussions</p>
+        <button class="btn-contact" (click)="openEmail()">
+          Send Email
+        </button>
+      </div>
+      
+      <div class="contact-method">
+        <div class="contact-icon">📱</div>
+        <h3>Social Media</h3>
+        <p>Follow for tips & updates</p>
+        <div class="social-links">
+          <button class="btn-social" (click)="openSocial('tiktok')">TikTok</button>
+          <button class="btn-social" (click)="openSocial('instagram')">Instagram</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="quick-contact">
+      <h3>Prefer to message here?</h3>
+      <form class="contact-form" (ngSubmit)="sendMessage()">
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" [(ngModel)]="contactData.name" name="name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Your Email" [(ngModel)]="contactData.email" name="email" required>
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Tell me about your project or question..." [(ngModel)]="contactData.message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">
+          <span class="btn-icon">📨</span>
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready to Ace Your Tech Assignments?</h2>
+      <p>Don't let confusing code or tight deadlines stress you out. I'm here to help you succeed.</p>
+      <div class="cta-actions">
+        <button class="btn-primary" (click)="openWhatsApp()">
+          <span class="btn-icon">💬</span>
+          Message on WhatsApp
+        </button>
+        <button class="btn-secondary" (click)="openEmail()">
+          <span class="btn-icon">📧</span>
+          Send an Email
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <span class="logo-icon">&gt;</span>
+          <span class="logo-text">ProjectPal</span>
+        </div>
+        <p>Your friendly tech tutor - making complex concepts simple and accessible.</p>
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <a (click)="scrollToSection('home')">Home</a>
+          <a (click)="scrollToSection('services')">Services</a>
+          <a (click)="scrollToSection('about')">About</a>
+          <a (click)="scrollToSection('contact')">Contact</a>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Contact Info</h4>
+          <p>📱 WhatsApp: +1 (614) 330-6944</p>
+          <p>📧 Email: bytedev32@gmail.com</p>
+          <p>🕒 Available: 24/7</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 ProjectPal. All rights reserved. | Designed with 💝 for students</p>
+    </div>
+  </div>
+</footer>
+
+<div class="floating-banner" *ngIf="showFloatingBanner">
+  <div class="banner-content">
+    <span class="banner-text">Didn't find your service?</span>
+    <button class="btn-banner" (click)="openWhatsApp()">Ask Me!</button>
+    <button class="banner-close" (click)="closeFloatingBanner()">×</button>
+  </div>
+</div>
